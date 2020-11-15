@@ -1,11 +1,4 @@
-import os
-import urllib
-
 import pyttsx3
-import requests
-from bs4 import BeautifulSoup
-from dotenv import load_dotenv
-load_dotenv()
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 125)

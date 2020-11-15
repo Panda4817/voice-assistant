@@ -1,14 +1,15 @@
 import speech_recognition as sr
 
-from util import *
-from song import *
-from answer import *
-from spell import *
+from kevin.answer import *
+from kevin.song import *
+from kevin.spell import *
+from kevin.util import *
 
 # obtain audio from the microphone
 s = sr.Recognizer()
-#engine_say("Hello I am KEVIN. Kanta's Eccentric, Vastly Intelligent Natural A.I.")
-#engine_say("I can search for songs or answer your question. Say song, then play a tune or say lyrics. Or, say answer, then ask a question.")
+print("Hello I am KEVIN. Kanta's Eccentric, Vastly Intelligent Natural A.I.")
+print("I can search for songs or answer your question. Say song, then play a tune or say lyrics. Or, say answer, then ask a question.")
+engine_say("Hello, I am KEVIN. How can I help you?")
 with sr.Microphone() as source:
     audio = s.listen(source, timeout=5)
 
