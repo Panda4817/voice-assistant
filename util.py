@@ -1,11 +1,7 @@
-import pyttsx3
-
-engine = pyttsx3.init()
-engine.setProperty('rate', 125)
-
-def engine_say(text):
-    engine.say(text)
-    engine.runAndWait()
+from answer import Find_answer
+from song import Find_song
+from spell import Spell_word
+from date_time import Say_date_time
 
 def fix_transcription(transcribed):
     # fix maths symbols
@@ -19,12 +15,14 @@ def fix_transcription(transcribed):
         transcribed = transcribed.replace('/', 'divided by')
     return transcribed
 
-def identify_task(transcribed):
+def identify_task(task_word):
     task = ''
-    if 'song' in transcribed.split(" "):
-        task = 'song'
-    if 'answer' in transcribed.split(" "):
-        task ='answer'
-    if 'spell' in transcribed.split(" "):
-        task = 'spell'
+    if 'song' == task_word:
+        task = Find_song()
+    if 'answer' == task_word:
+        task = Find_answer()
+    if 'spell' == task_word:
+        task = Spell_word()
+    if 'time' == task_word or 'date' == task_word:
+        task = Say_date_time()
     return task
