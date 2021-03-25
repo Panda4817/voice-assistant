@@ -74,7 +74,7 @@ class Find_answer:
         return answer_provided
     
     def other_answer(self, results):
-       # Provide other answers (fix with more intelligent AI)
+       # Provide other answers
         for res in r_json['results']:
             if res['description'] != '':
                 arr = res['title'].split(' - ')

@@ -1,6 +1,6 @@
 import speech_recognition as sr
 
-from util import fix_transcription, identify_task, print_help
+from util import fix_transcription, identify_task
 from talking_engine import engine_say
 
 # Introduce kevin
