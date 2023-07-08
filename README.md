@@ -4,4 +4,8 @@ Using Python 3, pyttsx3 and Google Speech Recognition to create my very own voic
 So far it can find a song, answer a question through Google search, spell words and tell the current time and date.
 
 ## Requirements
-- see requirments.txt
+- Python 3.8
+- see requirements.txt
+
+## WSL2 and Pulseaudio
+See https://www.reddit.com/r/bashonubuntuonwindows/comments/hrn1lz/wsl_sound_through_pulseaudio_solved/

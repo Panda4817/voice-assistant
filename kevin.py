@@ -15,7 +15,7 @@ with sr.Microphone() as source:
 try:
     # to use another API key, use `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
     transcribed = fix_transcription(s.recognize_google(audio))
-    
+
     task_words = transcribed.split(" ")
     task = identify_task(task_words[0])
     main_text = " ".join(task_words[1:])
@@ -28,5 +28,5 @@ try:
 except sr.UnknownValueError:
     engine_say("Google Speech Recognition could not understand audio")
 except sr.RequestError as e:
-    engine_say("Could not request results from Google Speech Recognition service; {0}".format(e))
-
+    engine_say(
+        "Could not request results from Google Speech Recognition service; {0}".format(e))
