@@ -9,3 +9,4 @@ So far it can find a song, answer a question through Google search, spell words 
 
 ## WSL2 and Pulseaudio
 See https://www.reddit.com/r/bashonubuntuonwindows/comments/hrn1lz/wsl_sound_through_pulseaudio_solved/
+When running program in WSL2, use pulseaudio to allow access to laptop speaker and microphone.
